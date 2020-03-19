@@ -1,0 +1,14 @@
+{
+	"name": "CosmosTarget",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TargetCosmos",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "CosmosDbSqlApiCollection",
+		"typeProperties": {
+			"collectionName": "NetactJsons"
+		}
+	}
+}

@@ -1,0 +1,126 @@
+{
+	"name": "InputNetActJSON",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InputBlob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "PM202002210935+010024WBTS_-_35.json",
+				"container": "dlstorage-demo"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"measCollecFile": {
+					"type": "object",
+					"properties": {
+						"@xmlns": {
+							"type": "string"
+						},
+						"fileFooter": {
+							"type": "object",
+							"properties": {
+								"measCollec": {
+									"type": "object",
+									"properties": {
+										"@endTime": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"fileHeader": {
+							"type": "object",
+							"properties": {
+								"@fileFormatVersion": {
+									"type": "string"
+								},
+								"@vendorName": {
+									"type": "string"
+								},
+								"fileSender": {
+									"type": "object",
+									"properties": {
+										"@elementType": {
+											"type": "string"
+										}
+									}
+								},
+								"measCollec": {
+									"type": "object",
+									"properties": {
+										"@beginTime": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"measData": {
+							"type": "object",
+							"properties": {
+								"managedElement": {
+									"type": "null"
+								},
+								"measInfo": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"@measInfoId": {
+												"type": "string"
+											},
+											"granPeriod": {
+												"type": "object",
+												"properties": {
+													"@duration": {
+														"type": "string"
+													},
+													"@endTime": {
+														"type": "string"
+													}
+												}
+											},
+											"measTypes": {
+												"type": "string"
+											},
+											"measValue": {
+												"type": "object",
+												"properties": {
+													"@measObjLdn": {
+														"type": "string"
+													},
+													"measResults": {
+														"type": "string"
+													}
+												}
+											},
+											"repPeriod": {
+												"type": "object",
+												"properties": {
+													"@duration": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
